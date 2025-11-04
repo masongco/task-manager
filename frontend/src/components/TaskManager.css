@@ -1,0 +1,180 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* TaskForm */
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-form input,
+.task-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.task-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #fff;
+  background-color: #007bff;
+}
+
+.task-form button:hover {
+  background-color: #0056b3;
+}
+
+/* TaskList */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-list li {
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.task-list li.completed {
+  background-color: #d4edda;
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.task-list h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.task-list p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.task-list button {
+  padding: 6px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 12px;
+}
+
+.task-list button:hover {
+  opacity: 0.9;
+}
+
+.task-list button.complete {
+  background-color: #28a745;
+}
+
+.task-list button.edit {
+  background-color: #ffc107;
+}
+
+.task-list button.delete {
+  background-color: #dc3545;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Modal form */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Modal buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-buttons button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal-buttons button:first-child {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.modal-buttons button:last-child {
+  background-color: #ccc;
+  color: #333;
+}
+
+@media (min-width: 500px) {
+  .task-list li {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .task-list div {
+    display: flex;
+    gap: 5px;
+  }
+}
